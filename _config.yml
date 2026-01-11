@@ -4,7 +4,7 @@ url: "https://naikangyuan.github.io" # 替换为你的GitHub Pages地址
 baseurl: "Yuan_ASPECT_tutorial" # 如果是主仓库(username.github.io)则留空 ""，如果是项目仓库则写 "/项目名"
 
 # 关键设置：使用远程主题
-remote_theme: pmarsceill/just-the-docs
+remote_theme: rundocs/jekyll-rtd-theme
 
 # 启用搜索功能（可选）
 search_enabled: true
