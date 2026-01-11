@@ -1,21 +1,11 @@
-# C++ 核心指南 (模拟版)
+# ASPECT入门
 
-欢迎来到我的文档网站。这里模仿 CppCoreGuidelines 的风格。
+欢迎来到我的网站。我将详细介绍地球物理学中的数值模拟。目前以aspect为例。
 
-## 1. 前言
-这是第一章节的内容。
+## 1. ASPECT安装
+aspect的安装是多种高性能计算软件包安装的集成
 
-- 要点一
-- 要点二
-- [这是一个链接](https://www.google.com)
+## 2. 关于.prm文件的讲解
 
-## 2. 代码示例
-下面是一段 C++ 代码：
 
-```cpp
-#include <iostream>
 
-int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
-}
