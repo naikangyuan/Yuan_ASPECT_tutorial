@@ -13,24 +13,26 @@ nav_order: 2
 
 在开始之前，请确保你的系统已经安装了基础的编译工具（如 gcc, g++, gfortran, make, cmake 等）。
 
-ASPECT 需要并行计算支持，因此首先需要安装 MPI 库。这里以 OpenMPI 为例。
+ASPECT 需要并行计算支持，因此首先需要安装 MPI 库。这里以 OpenMPI 为例。\
+
 1.1 安装 OpenMPI
 
-假设你已经下载并编译安装了 OpenMPI（例如版本 5.0.5），安装路径为 /home/yuan/mpi/openmpi-5.0.5。
+假设你已经下载并编译安装了 OpenMPI（例如版本 5.0.5），安装路径为 /home/yuan/mpi/openmpi-5.0.5。\
+
 1.2 配置环境变量
 
-安装完成后，必须将 MPI 的可执行文件和库文件路径添加到环境变量中，否则后续的 Candi 和 ASPECT 将无法找到并行编译器。
+安装完成后，必须将 MPI 的可执行文件和库文件路径添加到环境变量中，否则后续的 Candi 和 ASPECT 将无法找到并行编译器。\
 
 打开你的终端配置文件（如 ~/.bashrc 或 ~/.zshrc），添加以下内容：
 code Bash
 
     
 #################################
-# OpenMPI Environment Configuration
+#OpenMPI Environment Configuration
 #################################
 export MPI_HOME=/home/yuan/mpi/openmpi-5.0.5
 export PATH=$MPI_HOME/bin:$PATH
-# 注意：确保 LD_LIBRARY_PATH 语法正确，保留原有路径
+#注意：确保 LD_LIBRARY_PATH 语法正确，保留原有路径
 export LD_LIBRARY_PATH=$MPI_HOME/lib:$LD_LIBRARY_PATH
 
   
@@ -47,6 +49,7 @@ source ~/.bashrc
 ### 2. 使用 Candi 自动安装 deal.II 及依赖
 
 ASPECT 严重依赖 deal.II 库及其生态系统（Trilinos, PETSc, p4est 等）。我们将使用 Candi 脚本来自动化这个复杂的编译过程。
+
 2.1 获取 Candi
 
 创建一个工作目录并克隆 Candi：
