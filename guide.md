@@ -28,11 +28,15 @@ code Bash
 
     
 #################################
+
 #OpenMPI Environment Configuration
+
 #################################
+
 export MPI_HOME=/home/yuan/mpi/openmpi-5.0.5
 export PATH=$MPI_HOME/bin:$PATH
 #注意：确保 LD_LIBRARY_PATH 语法正确，保留原有路径
+
 export LD_LIBRARY_PATH=$MPI_HOME/lib:$LD_LIBRARY_PATH
 
   
@@ -46,6 +50,7 @@ source ~/.bashrc
   
 
 验证： 输入 mpicc --version 和 mpicxx --version，确保输出的是你刚安装的版本。
+
 ### 2. 使用 Candi 自动安装 deal.II 及依赖
 
 ASPECT 严重依赖 deal.II 库及其生态系统（Trilinos, PETSc, p4est 等）。我们将使用 Candi 脚本来自动化这个复杂的编译过程。
