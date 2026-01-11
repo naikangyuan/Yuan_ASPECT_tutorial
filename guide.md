@@ -187,10 +187,8 @@ source /home/yuan/fem4/dealii-candi/configuration/enable.sh
 
 依赖库准备好后，就可以编译 ASPECT 了。
 3.1 获取 ASPECT 源码
-code Bash
 
-    
-cd ~/fem4
+cd ~/自己建立的文件
 git clone https://github.com/geodynamics/aspect.git
 cd aspect
 
