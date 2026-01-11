@@ -35,6 +35,7 @@ code Bash
 
 export MPI_HOME=/home/yuan/mpi/openmpi-5.0.5
 export PATH=$MPI_HOME/bin:$PATH
+
 #注意：确保 LD_LIBRARY_PATH 语法正确，保留原有路径
 
 export LD_LIBRARY_PATH=$MPI_HOME/lib:$LD_LIBRARY_PATH
@@ -57,14 +58,13 @@ ASPECT 严重依赖 deal.II 库及其生态系统（Trilinos, PETSc, p4est 等�
 
 2.1 获取 Candi
 
-创建一个工作目录并克隆 Candi：
-code Bash
+
 
     
-mkdir -p ~/fem4
-cd ~/fem4
-git clone https://github.com/dealii/candi.git
-cd candi
+    mkdir -p ~/fem4
+    cd ~/fem4
+    git clone https://github.com/dealii/candi.git
+    cd candi
 
   
 
@@ -89,51 +89,75 @@ code Bash
 PACKAGES="load:dealii-prepare"
 
 #--- System dependencies (通常系统已预装，如果报错请取消注释) ---
-#PACKAGES="${PACKAGES} once:zlib"
-#PACKAGES="${PACKAGES} once:bzip2"
-#PACKAGES="${PACKAGES} once:git"
-#PACKAGES="${PACKAGES} once:cmake"
-#PACKAGES="${PACKAGES} once:openblas"
+
+    #PACKAGES="${PACKAGES} once:zlib"
+    
+    #PACKAGES="${PACKAGES} once:bzip2"
+    
+    #PACKAGES="${PACKAGES} once:git"
+    
+    #PACKAGES="${PACKAGES} once:cmake"
+    
+    #PACKAGES="${PACKAGES} once:openblas"
 
 #--- Optional Tools ---
-#PACKAGES="${PACKAGES} once:astyle"
-#PACKAGES="${PACKAGES} once:numdiff"
+
+    #PACKAGES="${PACKAGES} once:astyle"
+    
+    #PACKAGES="${PACKAGES} once:numdiff"
 
 #--- Packages for ASPECT / deal.II Active Components ---
-#PACKAGES="${PACKAGES} once:adolc"
-#PACKAGES="${PACKAGES} once:arpack-ng"
-#PACKAGES="${PACKAGES} once:assimp"
-#PACKAGES="${PACKAGES} once:ginkgo"
-#PACKAGES="${PACKAGES} once:gmsh"
-#PACKAGES="${PACKAGES} once:gsl"
-#PACKAGES="${PACKAGES} once:mumps"
-#PACKAGES="${PACKAGES} once:opencascade"
+
+    #PACKAGES="${PACKAGES} once:adolc"
+    
+    #PACKAGES="${PACKAGES} once:arpack-ng"
+    
+    #PACKAGES="${PACKAGES} once:assimp"
+    
+    #PACKAGES="${PACKAGES} once:ginkgo"
+    
+    #PACKAGES="${PACKAGES} once:gmsh"
+    
+    #PACKAGES="${PACKAGES} once:gsl"
+    
+    #PACKAGES="${PACKAGES} once:mumps"
+    
+    #PACKAGES="${PACKAGES} once:opencascade"
 
 #[必须] 并行网格划分依赖
+
 PACKAGES="${PACKAGES} once:parmetis"
 
 #[推荐] 时间步进求解器
+
 PACKAGES="${PACKAGES} once:sundials"
 
 #[必须] 数据输出格式支持
-PACKAGES="${PACKAGES} once:hdf5"
-#PACKAGES="${PACKAGES} once:netcdf"
+
+    PACKAGES="${PACKAGES} once:hdf5"
+    
+    #PACKAGES="${PACKAGES} once:netcdf"
 
  [必须] 并行自适应网格库
+ 
 PACKAGES="${PACKAGES} once:p4est"
 
 #PACKAGES="${PACKAGES} once:kokkos once:kokkoskernels"
 
 [必须] 线性代数求解器 (Trilinos 是 ASPECT 的核心依赖之一)
+
 PACKAGES="${PACKAGES} once:trilinos"
 
 #PACKAGES="${PACKAGES} once:hypre"
 
 [推荐] 另一个强大的线性代数求解器库
+
 PACKAGES="${PACKAGES} once:petsc"
+
 PACKAGES="${PACKAGES} once:slepc"
 
 [可选] 符号计算引擎
+
 PACKAGES="${PACKAGES} once:symengine"
 
 [必须] 最终的主程序库
@@ -179,9 +203,6 @@ Build finished in 11311 seconds.
 
   
 
-关键步骤： 为了让 ASPECT 找到刚才安装的所有库，必须执行 Candi 生成的 enable.sh 脚本。
-code Bash
-
     
 #将此命令添加到你的终端配置文件中，或者每次编译前手动运行
 source /home/yuan/fem4/dealii-candi/configuration/enable.sh
@@ -203,38 +224,21 @@ cd aspect
 
 ASPECT 使用 CMake 进行构建。
 
-    加载环境（如果之前没做）：
-    code Bash
-
     
 source /home/yuan/fem4/dealii-candi/configuration/enable.sh
 
-  
-
-创建构建目录：
-code Bash
-
     
 mkdir build
+
 cd build
-
-  
-
-配置与生成 Makefile：
-code Bash
-
     
 cmake ..
 
   
 
 此时注意观察输出，CMake 应该能自动识别到 deal.II 的路径以及 Trilinos, p4est 等组件。如果报错提示找不到 deal.II，请检查上一步 source 是否执行成功。
-
-开始编译：
-code Bash
-
         
-    make -j4
+     make -j4
 
       
 
@@ -245,7 +249,8 @@ code Bash
 
     
 #运行一个简单的测试
-./aspect ../cookbooks/shell_simple_2d/shell_simple_2d.prm
+
+    ./aspect ../cookbooks/shell_simple_2d/shell_simple_2d.prm
 
   
 
