@@ -26,6 +26,7 @@ search_enabled: true
 aux_links:
   "GitHub 仓库":
     - "https://github.com/naikangyuan/Yuan_ASPECT_tutorial"
+footer_content: "Copyright &copy; 2026 Naikangyuan. All rights reserved."
 
 # 颜色设置 (可选)
 color_scheme: light
