@@ -1,17 +1,15 @@
-
 # -----------------------
 # 网站基本信息
 # -----------------------
-title: 我的技术文档             # 左上角显示的网站标题
-description: 这是一个示例文档   # SEO描述
-url: "https://你的用户名.github.io" # 你的GitHub Pages域名
+title: 我的技术文档
+description: 这是一个示例文档
+url: "https://naikangyuan.github.io"
 
 # -----------------------
-# 关键路径设置 (非常重要！)
+# 关键路径设置 (这里改了！)
 # -----------------------
-# 1. 如果你的仓库名是 "你的用户名.github.io"，请留空：""
-# 2. 如果你的仓库名是 "project-name"，请填写："/project-name"
-baseurl: "/你的仓库名"
+# 必须加上斜杠 "/"
+baseurl: "/Yuan_ASPECT_tutorial"
 
 # -----------------------
 # 主题设置
@@ -19,22 +17,17 @@ baseurl: "/你的仓库名"
 remote_theme: rundocs/jekyll-rtd-theme
 
 # -----------------------
-# 插件 (必须开启)
+# 插件
 # -----------------------
 plugins:
   - jekyll-remote-theme
   - jekyll-seo-tag
 
 # -----------------------
-# 排除文件 (不显示在目录中)
+# 排除文件
 # -----------------------
 exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
-  - README.md   # 通常建议排除README，用 index.md 做首页
-
-# -----------------------
-# Google Analytics (可选，不需要则删除)
-# -----------------------
-# google_analytics: UA-XXXXX-X
+  - README.md
