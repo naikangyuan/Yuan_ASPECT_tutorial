@@ -1,28 +1,18 @@
-title: 我的文档站点               # 站点标题
-description: 一个简洁的文档网站   # 站点描述（可选）
+title: 我的文档网站
+description: 这是一个左侧目录右侧内容的示例网站
+url: "https://naikangyuan.github.io" # 替换为你的GitHub Pages地址
+baseurl: "Yuan_ASPECT_tutorial" # 如果是主仓库(username.github.io)则留空 ""，如果是项目仓库则写 "/项目名"
 
-# 主题设置
-theme: just-the-docs
+# 关键设置：使用远程主题
+remote_theme: pmarsceill/just-the-docs
 
-# 启用 Just the Docs 的功能
-just_the_docs:
-  # 左侧导航栏标题
-  parent_page_title: "目录"
-
-# 搜索功能（内置，支持中文）
+# 启用搜索功能（可选）
 search_enabled: true
-search:
-  heading_level: 2
-  previews: 3
-  preview_words_before: 5
-  preview_words_after: 10
 
-# 颜色方案（可选：浅色/深色/自动）
-color_scheme: light   # 可选：dark、nil（自动）
+# 颜色主题（可选）
+color_scheme: light
 
-# 辅助链接（右上角）
+# 辅助链接（可选，显示在右上角）
 aux_links:
-  "GitHub 仓库": "https://github.com/你的用户名/仓库名"
-
-# 底部链接（可选）
-footer_content: "Copyright &copy; 2026 你的名字"
+  "GitHub 仓库":
+    - "https://naikangyuan.github.io/Yuan_ASPECT_tutorial/"
