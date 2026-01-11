@@ -1,2 +1,28 @@
-theme: jekyll-theme-slate
-title: ASPECT入门网站
+title: 我的文档站点               # 站点标题
+description: 一个简洁的文档网站   # 站点描述（可选）
+
+# 主题设置
+theme: just-the-docs
+
+# 启用 Just the Docs 的功能
+just_the_docs:
+  # 左侧导航栏标题
+  parent_page_title: "目录"
+
+# 搜索功能（内置，支持中文）
+search_enabled: true
+search:
+  heading_level: 2
+  previews: 3
+  preview_words_before: 5
+  preview_words_after: 10
+
+# 颜色方案（可选：浅色/深色/自动）
+color_scheme: light   # 可选：dark、nil（自动）
+
+# 辅助链接（右上角）
+aux_links:
+  "GitHub 仓库": "https://github.com/你的用户名/仓库名"
+
+# 底部链接（可选）
+footer_content: "Copyright &copy; 2026 你的名字"
