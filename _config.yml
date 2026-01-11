@@ -14,7 +14,7 @@ baseurl: "/Yuan_ASPECT_tutorial"
 # -----------------------
 # 主题设置
 # -----------------------
-remote_theme: rundocs/jekyll-rtd-theme
+remote_theme: rundocs/jekyll-rtd-theme@2.0.10
 
 # -----------------------
 # 插件
