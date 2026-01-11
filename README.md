@@ -1,0 +1,2 @@
+# Yuan_ASPECT_tutorial
+这是一个ASPECT（全球地幔对流数值模拟）的一个普及，未来我会详细的介绍aspect的安装和使用。方便国内地学的同行入门aspect。
