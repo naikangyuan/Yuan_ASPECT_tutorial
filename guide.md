@@ -15,7 +15,14 @@ nav_order: 2
 
 #### 1. openmpi
 
+mpi_send mpi_rev
+
 #### 1. cuda
+
+在啃cudac++的指南
 
 ### 2.并行算法的学习
 
+在啃伯克利的CS267(最近会同时更新)
+
+全部都是内存的管理。难.
