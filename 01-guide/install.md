@@ -1,6 +1,10 @@
 ---
 layout: default
 title: 安装教程
-parent: 入门指南    <-- 关键：必须和父页面的 title 一模一样
+parent: 入门指南
 nav_order: 1
 ---
+
+# 安装教程
+
+本节将补充 ASPECT 与相关依赖的安装步骤。
