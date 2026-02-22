@@ -1,8 +1,10 @@
 ---
 layout: default
 title: 快速开始
-sort: 2            # <--- 排在安装教程后面
+parent: 入门指南
+nav_order: 2
 ---
 
 # Hello World
-这里是快速开始的内容...
+
+这里是快速开始的内容。
